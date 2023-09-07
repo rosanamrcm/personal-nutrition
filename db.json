@@ -1,0 +1,112 @@
+{
+  "user": [
+    {
+      "email": "srhermanodecastro@gmail.com",
+      "password": "paraguai",
+      "name": "Hermano de Castro Pinheiro"
+    },
+    {
+      "email": "mrcm1975@gmail.com",
+      "password": "lindademais",
+      "name": "Maria Rosana de Castro Marcos"
+    }
+  ],
+  "schedule": [
+    {
+      "email": "srhermanodecastro@gmail.com",
+      "local": "Clínica de Saúde Preventiva",
+      "professional": "José do Patrocinio",
+      "date": "20/10/2023",
+      "time": "19h",
+      "done": false,
+      "data": {
+        "weight": "",
+        "bf": "",
+        "weight_mass": ""
+      }
+    },
+    {
+      "email": "srhermanodecastro@gmail.com",
+      "local": "Clínica de Saúde Preventiva",
+      "professional": "Francisco Castro",
+      "date": "19/09/2023",
+      "time": "15h",
+      "done": false,
+      "data": {
+        "weight": "",
+        "bf": "",
+        "weight_mass": ""
+      }
+    },
+    {
+      "email": "srhermanodecastro@gmail.com",
+      "local": "Clínica de Saúde Preventiva",
+      "professional": "Antonio Abrantes",
+      "date": "18/08/2023",
+      "time": "17h",
+      "done": true,
+      "data": {
+        "weight": 75,
+        "bf": 30,
+        "weight_mass": 30
+      }
+    },
+    {
+      "email": "mrcm1975@gmail.com",
+      "local": "Clínica de Saúde Preventiva",
+      "professional": "Julio Almeida",
+      "date": "17/09/2023",
+      "time": "17h",
+      "done": false,
+      "data": {
+        "weight": "",
+        "bf": "",
+        "weight_mass": ""
+      }
+    },
+    {
+      "email": "mrcm1975@gmail.com",
+      "local": "Clínica de Saúde Preventiva",
+      "professional": "Gaspar Sá",
+      "date": "15/08/2023",
+      "time": "17h",
+      "done": true,
+      "data": {
+        "weight": 77,
+        "bf": 18,
+        "weight_mass": 38
+      }
+    },
+    {
+      "email": "mrcm1975@gmail.com",
+      "local": "Clínica de Saúde Preventiva",
+      "professional": "Joana Silva",
+      "date": "10/07/2023",
+      "time": "17h",
+      "done": true,
+      "data": {
+        "weight": 80,
+        "bf": 20,
+        "weight_mass": 41
+      }
+    }
+  ],
+  "available": [
+      {
+        "local": "Clínica de Saúde Preventiva",
+        "professional": "Joana Silva",
+        "date": [
+          "11/07/2023",
+          "12/07/2023",
+          "14/07/2023"
+        ],
+        "time": [
+          "10h",
+          "11h",
+          "12h",
+          "14h",
+          "15h"
+        ] 
+      }
+  ]
+}

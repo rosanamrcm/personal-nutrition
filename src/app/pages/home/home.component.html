@@ -1,0 +1,119 @@
+<div class="container">
+    <div class="toolbar">
+        <div class="nutri">
+            <img src="../assets/icons/logo-secondary.svg" alt="Nutri">
+        </div>
+        <div class="initial-log">
+            <div class="name">
+                <h1>{{ user.name }}</h1>
+            </div>
+            <button type="button" class="btn" (click)="logout()">Sair</button>
+        </div>
+    </div>
+    <div class="schedule">
+        <h2>Agendadas</h2>
+        <div> 
+            <button class="add" (click)="openModal('new-schedule-modal')">
+                <img src="../assets/icons/add.svg" alt="add_circle" class="add_circle">
+                <h6>Nova consulta</h6>
+            </button>          
+        </div>  
+
+        <!-- MODAL INICIO -->
+
+        <div class="jw-modal" id="new-schedule-modal">
+            <div class="jw-modal-body">
+                <button class="close-modal" (click)="closeModal()">X</button> <br>
+                <div class="options">
+                    <input type="radio" name="webmaster" value="sim"/> 04/10/2023 16h Júlio Almeida <br>
+                    <input type="radio" name="webmaster" value="sim"/> 08/10/2023 15h Sofia Amarantes <br>
+                    <input type="radio" name="webmaster" value="sim"/> 12/10/2023 13h Lúcio Antunes <br>
+                    <input type="radio" name="webmaster" value="sim"/> 16/10/2023 14h Marta Menezes 
+                </div>
+            </div>
+        </div>    
+
+        <!-- MODAL FIM -->
+    </div>
+    <div class="header-box">
+        <div class="sub-header-box" >
+            <div class=local>
+                <h6>LOCAL</h6>
+            </div>
+            <div class=professional>
+                <h6>PROFISSIONAL</h6>
+            </div>
+            <div class=date>
+                <h6>DATA</h6>
+            </div>
+            <div class=hour>
+                <h6>HORÁRIO</h6>
+            </div>
+        </div>
+    </div>
+    <div class="info" *ngFor="let s of schedules">
+       <div class="info-box">
+            <img src="../assets/icons/local.svg" alt="local" class="local-icon">
+            <h6>{{s.local}}</h6>
+        </div>
+        <div class="info-box">
+            <h6>{{s.professional}}</h6>
+        </div>
+        <div class="info-box">
+            <h6>{{s.date}}</h6>
+        </div>
+        <div class="info-box">
+            <h6>{{s.time}}</h6>
+        </div>
+        <div class="info-box">
+            <button class="markoff-btn" (click)="cancelSchedule(s)"><img src="../assets/icons/markoff.svg" alt="markoff" class="markoff">Desmarcar</button>          
+        </div>      
+    </div>
+    <div class="schedule2">
+        <h2>Histórico de Consultas</h2>
+    </div>
+    <div class="header-box">
+        <div class="sub-header-box">
+            <div class="professional2">
+                <h6>PROFISSIONAL</h6>
+            </div>
+            <div class="date2">
+                <h6>DATA DA CONSULTA</h6>
+            </div>
+            <div class="weight">
+                <h6>PESO DO PACIENTE</h6>
+            </div>
+            <div class="percent">
+                <h6>PORCENTAGEM DE GORDURA</h6>
+            </div>
+            <div class="mass">
+                <h6>MASSA MAGRA</h6>
+            </div>
+        </div>
+    </div>
+    <div class="info" *ngFor="let h of historics">
+        <div class="sub-info-box">
+            <h6>{{ h. professional }}</h6>
+            <div class="sub-info-box2">
+                <img src="../assets/icons/local.svg" alt="local" class="local-icon">
+                <h6>{{ h.local }}</h6>
+            </div>
+        </div>       
+        <div class="info-box">
+            <h6>{{ h.date }}</h6>
+        </div>
+        <div class="info-box">
+            <h6>{{ h.data.weight }} kg</h6>
+        </div>
+        <div class="info-box">
+            <h6>{{ h.data.bf }}</h6>
+        </div>
+        <div class="info-box">
+            <h6>{{ h.data.weight_mass }} kg</h6>
+        </div>
+        <div class="info-box">
+            <button class="details-btn">Detalhes</button> 
+        </div>
+    </div>
+</div>
+

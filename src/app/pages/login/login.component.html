@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="login">
+         <div class="logo">
+             <img src="../assets/icons/logo-primary.svg" alt="nutri">        
+         </div>
+         <div class="register-name">
+             <input [(ngModel)]="user.email" type="text" placeholder="Email" class="username"/>
+             <img src="../assets/icons/user.svg" alt="user" class="user">
+         </div>
+         <div class="register-password"> 
+            <input [(ngModel)]="user.password" [type]="passwordType" placeholder="Senha" class="password">
+            <img [src]="pathIcon" alt="user" class="closed-eye" (click)="togglePassword()">
+         </div>  
+         <button type="submit" class="button1" (click)="login()">Entrar</button>
+         <button type="submit" class="button2" (click)="createAccount()">Criar conta</button>
+         <p> {{ errorMessage }} </p>
+    </div>
+ </div>
